@@ -27,9 +27,3 @@ class AwsSkills(Skill):
                 keyss.append(key["UserName"] + ': ' + key["AccessKeyId"])
         kz = '```' + '\n'.join(keyss) + '```'
         await message.respond('Here you go:\n'+kz)
-
-'''
-list_keys = iam.list_access_keys(UserName="tajinder")
-for key in list_keys["AccessKeyMetadata"]:
-    print (key["UserName"] + ': ' + key["AccessKeyId"])
-'''
