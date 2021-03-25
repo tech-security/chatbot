@@ -1,0 +1,22 @@
+welcome-message: true
+
+connectors:
+  slack:
+    # required
+    token: "xoxb-##############"
+    # optional
+    #user-token: "xoxp-###############"
+    bot-name: "Misaki"
+    default-room: "#random"
+    icon-emoji: ":misaki:"
+    connect-timeout: 10
+    chat-as-user: false
+    start_thread: false
+
+## Skill modules
+
+skills:
+  - name: intro
+    path: $HOME/repos/chatbot/skills/intro
+  - name: aws
+    path: $HOME/repos/chatbot/skills/aws
