@@ -80,4 +80,3 @@ class HelloByeSkill(Skill):
     @match_regex(r'omg|omg!|oh my god|oh my god!', case_sensitive=False)
     async def omgggg(self, message):
         await message.respond(':dancer:')
-
