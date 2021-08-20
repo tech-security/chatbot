@@ -4,7 +4,7 @@ from opsdroid.matchers import match_regex
 from opsdroid.skill import Skill
 
 ## Config
-session = boto3.Session(profile_name='sc-dafiti1')
+session = boto3.Session(profile_name='gfg-security')
 #session = boto3.Session()
 iam = session.client("iam")
 resource = session.resource("iam")
@@ -12,7 +12,7 @@ resource = session.resource("iam")
 class AwsSkills(Skill):
     @match_regex(r"which aws account is it\?|which aws account\?|which account is it\?|which account is that\?", case_sensitive=False)
     async def accID(self, message):
-        await message.respond(f"Please wait.. let me check!")
+        await message.respond(f"Please wait.. I'm checking..")
         ac_id = session.client('sts').get_caller_identity().get('Account')
         alias = session.client('iam').list_account_aliases()['AccountAliases'][0]
         await message.respond(f"It's {alias}: `{ac_id}`.")

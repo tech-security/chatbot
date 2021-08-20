@@ -5,7 +5,6 @@ connectors:
     # required
     token: "xoxb-##############"
     # optional
-    #user-token: "xoxp-###############"
     bot-name: "Misaki"
     default-room: "#random"
     icon-emoji: ":misaki:"
